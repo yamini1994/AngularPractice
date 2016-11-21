@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>Food Zone</h1>
+<div id="container">
+	<h3>Order food items of your choice..!!</h3>
+	<div id="myStoreItem" class="clear">
+		<div *ngFor = "let item of items " (click) = "ItemSelected(item)" class="storeItemList {{item.split(' ').join('')}}"><span class="itemName">{{item}}</span></div>
+	</div>
+	<div id="cart">
+		<h3>Cart:</h3>
+		<ul>
+			<li *ngFor = "let i of cart " >{{i}}</li><br>
+		</ul>
+	</div>
+</div>
+</body>
+</html>
